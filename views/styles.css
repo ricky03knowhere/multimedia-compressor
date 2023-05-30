@@ -1,0 +1,72 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.hero-section {
+  margin-top: -6em;
+  padding: 8em 0 15em !important;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
+}
+
+.hero-section .wrapper {
+  margin-top: 5em;
+}
+
+.hero-section .wrapper .btn:first-of-type {
+  margin-right: 3rem;
+}
+
+.hero-section .wrapper .btn {
+  padding: 0.5em 3em;
+  border-radius: 0.8em;
+  line-height: 3em;
+}
+
+.hero-section .wrapper .btn .fa {
+  transform: translateY(23.3%);
+}
+
+#image {
+  margin-top: -14em;
+}
+
+section h2 {
+  margin-bottom: 1em;
+}
+
+section .form-control {
+  margin-bottom: 1em;
+}
+
+#audio {
+  color: white;
+  margin-top: -18em;
+  padding: 15em 0 !important;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0061FF", endColorstr="#60EFFF", GradientType=1);
+}
+
+#audio .container {
+  margin-top: 8em;
+}
+
+footer {
+  position: relative;
+  transform: translateY(12em);
+}
