@@ -29,7 +29,8 @@ app.post("/convert", upload.single("audio"), (req, res) => {
 
   const filePath = req.file.path;
   const outputFileName = "converted.mp3";
-
+  console.log(req.file)
+console.log(filePath)
   ffmpeg(filePath)
     .toFormat("mp3")
     .output(outputFileName)
