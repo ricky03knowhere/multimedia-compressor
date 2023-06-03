@@ -27,7 +27,7 @@ app.post("/convert", upload.single("audio"), (req, res) => {
     return res.status(400).send("No audio file uploaded");
   }
 
-  const filePath = req.file.path;
+  const filePath = "/../../../../../" + req.file.path;
   const outputFileName = "converted.mp3";
   console.log(req.file)
 console.log(filePath)
@@ -56,7 +56,7 @@ app.post("/compress", upload.single("image"), async (req, res) => {
     return res.status(400).send("No image file uploaded");
   }
 
-  const filePath = req.file.path;
+  const filePath =  __dirname + req.file.path;
   const outputFileName = "compressed.jpg";
   const quality = 80;
 
@@ -71,6 +71,9 @@ app.post("/compress", upload.single("image"), async (req, res) => {
       if (err) {
         console.error("Error downloading file:", err);
       }
+      
+        console.log(req.file)
+console.log(filePath)
       // Clean up the temporary files
       deleteTemporaryFiles([filePath, outputFileName]);
     });
