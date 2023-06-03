@@ -29,7 +29,7 @@ app.post("/convert", upload.single("audio"), (req, res) => {
 
   const filePath = "/../../../../.." + req.file.path;
   const outputFileName = "converted.mp3";
- 
+ console.log("audio compression");
   ffmpeg(filePath)
     .toFormat("mp3")
     .output(outputFileName)
@@ -60,14 +60,14 @@ app.post("/compress", upload.single("image"), async (req, res) => {
   const filePath = "/../../../../.." + req.file.path;
   const outputFileName = "compressed.jpg";
   const quality = 80;
-
+console.log("image compression");
   try {
     await sharp(filePath)
       .jpeg({
         quality,
       })
       .toFile(outputFileName);
-
+console.log("imagecompression complete");
     res.download(outputFileName, (err) => {
       if (err) {
         console.error("Error downloading file:", err);
