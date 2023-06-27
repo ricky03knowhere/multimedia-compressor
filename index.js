@@ -9,7 +9,7 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 const app = express();
 const upload = multer({
-  dest: "/../../../../../tmp/",
+  dest: "/tmp",
 });
 
 app.set("view engine", "ejs");
